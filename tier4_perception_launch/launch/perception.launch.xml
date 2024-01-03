@@ -73,6 +73,9 @@
   <arg name="objects_filter_method" default="lanelet_filter"/>
   <arg name="objects_validation_method" default="obstacle_pointcloud"/>
 
+  <!-- Carla virtual objects -->
+  <arg name="use_carla_objects" default="true" description="use objects in carla"/>
+
   <!-- Traffic light recognition parameters -->
   <arg name="use_traffic_light_recognition" default="true"/>
   <arg name="traffic_light_recognition/enable_fine_detection" default="true"/>
@@ -183,6 +186,7 @@
           <arg name="fusion_distance" value="$(var fusion_distance)"/>
           <arg name="trust_object_distance" value="$(var trust_object_distance)"/>
           <arg name="use_roi_based_cluster" value="$(var use_roi_based_cluster)"/>
+          <arg name="use_carla_objects" value="$(var use_carla_objects)"/>
         </include>
       </group>
 
